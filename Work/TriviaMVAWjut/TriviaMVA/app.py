@@ -9,19 +9,10 @@ app = Flask(__name__)
 # Make the WSGI interface available at the top level so wfastcgi can get it.
 wsgi_app = app.wsgi_app
 
+# import all routes
+from routes import *
 
-@app.route('/')
-def hello():
-    """Renders a sample page."""
-    return """<html>
-                <head>
-                    <title>Hello world</title>
-                    <body>
-                        <h1>Hello Johny</h1>
-                    </body>
-                </head>
-            </html>"""
-
+# lounch our server
 if __name__ == '__main__':
     import os
     HOST = os.environ.get('SERVER_HOST', 'localhost')

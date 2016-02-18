@@ -29,9 +29,17 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
+    <Compile Include="routes.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="requirements.txt" />
+    <Content Include="Templates\AnswerQuestion.html" />
+    <Content Include="Templates\Correct.html" />
+    <Content Include="Templates\CreatedQuestion.html" />
+    <Content Include="Templates\CreateQuestion.html" />
+    <Content Include="Templates\Incorrect.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -45,6 +53,9 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X86</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
