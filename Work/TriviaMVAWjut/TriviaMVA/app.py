@@ -1,6 +1,6 @@
 """
 This script runs the application using a development server.
-It contains the definition of routes and views for the application.
+The definition of routes and views for the application were moved to routes module
 """
 
 from flask import Flask
